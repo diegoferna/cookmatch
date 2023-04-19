@@ -1,0 +1,14 @@
+{
+  "senhas": [
+    {
+      "id": 1,
+      "numero_senha": "A001",
+      "horario": "2023-04-17T10:35:00"
+    },
+    {
+      "id": 2,
+      "numero_senha": "A002",
+      "horario": "2023-04-17T10:35:00"
+    }
+  ]
+}

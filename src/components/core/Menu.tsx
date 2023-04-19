@@ -1,9 +1,9 @@
 import React from 'react'
-import profileIcon from "../assets/diego.jpeg"
+import profileIcon from "../../assets/diego.jpeg"
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-// @heroicons/react/24/outline
+
 
 const user = {
     name: 'Tom Cook',
@@ -12,9 +12,9 @@ const user = {
   }
   
   const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Receitas', href: '#', current: false },
-    { name: 'Contatos', href: '#', current: false },
+    { name: 'Dashboard', href: '/home', current: true },
+    { name: 'Receitas', href: '/receitas', current: false },
+    { name: 'Contatos', href: '/contatos', current: false },
   ]
   const userNavigation = [
     { name: 'Conta', href: '#' },

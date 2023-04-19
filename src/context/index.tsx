@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { Recipes } from '../page/Home/components/reciepeItem'
+import { Recipes } from '../page/Home/components/RecipeItem'
 // import { taskProp } from '../page/home'
 
 type Props ={

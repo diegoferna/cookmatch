@@ -1,14 +1,14 @@
+import { Outlet } from "react-router-dom"
+import Header from "./components/core/Header"
+import MenuNavigation from "./components/core/Menu"
 
-import { DatabaseContextProvider } from "./context"
-import Home from "./page/Home"
 
 function App() {
-  
   return (
-    <div>
-      <DatabaseContextProvider>
-        <Home />
-      </DatabaseContextProvider>
+    <div className="h-screen">
+      <MenuNavigation />
+      <Header />
+      <Outlet />
     </div>
   )
 }

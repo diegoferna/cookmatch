@@ -48,22 +48,44 @@ export default function DetailsModal({ recipe, triggerOpenModal, handleChangeMod
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-h-96 max-w-4xl overflow-auto rounded-2xl bg-white shadow-gray-light shadow-sm border border-r-orange border-b-orange border-l-green border-t-green p-6 text-left align-middle transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
                     {recipe.title}
                   </Dialog.Title>
-                  <div className="mt-2 flex flex-row gap-4 justify-between">
-                  <img src={recipe.img} />
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quaerat incidunt veniam in ut magnam quae suscipit eaque possimus. Doloribus, architecto odit nemo eligendi deserunt itaque ipsa ullam minima.</p>
+                  <div className="mt-8 flex flex-row gap-4 justify-between">
+                    <img className="rounded-full object-contain" src={recipe.img} />
+                    <div>
+                      <section className="flex flex-col gap-2">
+                        <h2 className="font-bold">Descrição:</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quaerat incidunt veniam in ut magnam quae suscipit eaque possimus. Doloribus, architecto odit nemo eligendi deserunt itaque ipsa ullam minima.</p>
+                      </section>
+                      <section className="mt-4 flex flex-col gap-2">
+                        <h2 className="font-bold">Ingredientes: </h2>
+                        <ul>
+                          {recipe.ingredientLines?.map((ingredientLines) => (
+                            <li>{ingredientLines}</li>
+                          ))}
+                        </ul>
+                      </section>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex flex-col gap-2">
+                    <h2 className="font-bold">Modo de Preparo:</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse amet sint aperiam doloribus. Voluptas atque blanditiis, rem vitae explicabo, quibusdam eius, veniam sit voluptate ad esse nulla nobis maiores autem!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse amet sint aperiam doloribus. Voluptas atque blanditiis, rem vitae explicabo, quibusdam eius, veniam sit voluptate ad esse nulla nobis maiores autem!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse amet sint aperiam doloribus. Voluptas atque blanditiis, rem vitae explicabo, quibusdam eius, veniam sit voluptate ad esse nulla nobis maiores autem!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse amet sint aperiam doloribus. Voluptas atque blanditiis, rem vitae explicabo, quibusdam eius, veniam sit voluptate ad esse nulla nobis maiores autem!</p>
+
                   </div>
 
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="border rounded-md p-2 hover:bg-green hover:text-white"
                       onClick={closeModal}
                     >
                       Got it, thanks!

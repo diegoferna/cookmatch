@@ -1,11 +1,9 @@
 import axios from 'axios'
-import { useContext } from 'react';
-import { DatabaseContext } from '../context';
-import { useDebounce } from '../utils/useDebounce';
 
 export interface Recipe {
   title: string
   img: string
+  ingredientLines?: Array<string>
 }
 
 const data = {
@@ -22,7 +20,8 @@ export async function ApiConsumer(query: string) {
     return response.data.hits.map(item => {
       return {
         title: item.recipe.label,
-        img: item.recipe.image
+        img: item.recipe.image,
+        ingredientLines: item.recipe.ingredientLines
       } 
     }) as Recipe[]
    

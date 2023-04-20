@@ -9,9 +9,9 @@ import {
     createBrowserRouter
   } from 'react-router-dom'
 import Home from '../page/Home'
-import Receitas from '../page/Receitas'
 import App from '../App'
-import Contato from '../page/Contato'
+import Contact from '../page/Contact'
+import Recipes from '../page/Recipes'
 
 export const router = createBrowserRouter([
     {
@@ -24,11 +24,11 @@ export const router = createBrowserRouter([
             },
             { 
                 path: 'receitas',
-                element: <Receitas />
+                element: <Recipes />
             },
             { 
                 path: 'contatos',
-                element: <Contato />
+                element: <Contact />
             }
         ]
     },

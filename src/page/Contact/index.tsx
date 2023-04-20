@@ -1,7 +1,7 @@
 import React from 'react'
 import profileIcon from "../../assets/diego.jpeg"
 
-export default function Contato() {
+export default function Contact() {
   return (
     <div className='w-full !h-[calc(100vh-128px-80px)]  flex flex-col items-center justify-center absolute top-36'>
 

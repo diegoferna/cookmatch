@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import RecipeItem from './components/RecipeItem';
-import { ApiConsumer, Recipe } from '../../api/server';
+import { ApiConsumer, Recipe } from '../../api/useRecipes';
 
 
 function Home() {
@@ -36,7 +36,7 @@ function Home() {
           </form>
       </div>
       <div className='w-2/3 pt-4 flex flex-wrap justify-between gap-4 max-h-96 overflow-auto'>
-         {searchResults.map(img => <RecipeItem title={img.title} img={img.img} />)}
+         {searchResults.map(recipe => <RecipeItem  recipe={recipe} />)}
       </div>
   </main>
     )

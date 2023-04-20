@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Receitas() {
+export default function Recipes() {
   return (
     <div>Receitas</div>
   )
